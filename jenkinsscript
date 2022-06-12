@@ -15,3 +15,7 @@ systemctl enable jenkins
 sleep 5
 firewall-cmd --permanent --zone=public --add-port=8080/tcp  
 firewall-cmd --reload
+echo "the ip and port will be displayed. with syntax <ip:port>"
+sleep 3
+ifconfig | grep 192
+cat /var/lib/jenkins/secrets/initialAdminPassword
